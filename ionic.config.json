@@ -1,5 +1,7 @@
 {
   "name": "ayudame",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+  <div id="map" style="height:100%;"></div>
+
+  <ion-button color="success" (click)="agregarMarcador()"><ion-icon name="checkmark-circle-outline"></ion-icon></ion-button>
+  <ion-button color="danger"> <ion-icon name="close-circle"></ion-icon></ion-button>
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="end">
+      <ion-fab-button color="light" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="agregarUbicacion()">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
