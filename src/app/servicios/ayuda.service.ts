@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Marker } from '../interfaces/marcadores.interface';
+import { AyudaTipo } from '../interfaces/ayudaTipo.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,28 +18,26 @@ export class AyudaService {
   }
 
   obtenerAyuda(){
-    this.marcas = this.db.collection('ayuda').valueChanges();
-    console.log(this.marcas);
+    this.marcas = this.db.collection('peticionUsuario').valueChanges();
   }
 
-  agregarAyuda(marca: Marker)
+  agregarAyuda(peticionUsuario: AyudaTipo, marca: Marker)
   {
     const enviarMarcador: Marker = {
       ...marca
-    }
-    return this.db.collection('ayuda').add(enviarMarcador);
+    };
+    return this.db.collection('peticionUsuario').add(enviarMarcador).then(ref => {
+      console.log('Added document with ID: ', ref.id);
+      this.db.collection('peticionUsuario').doc(ref.id).collection('descripcion').add(peticionUsuario);
+    });
   }
   
   obtenerMarcas(){
-    this.itemsCollection = this.db.collection<any>('ayuda');
+    this.itemsCollection = this.db.collection<any>('peticionUsuario');
     return this.itemsCollection.snapshotChanges().pipe(map(actions => {
-
       return actions.map(a => {
-
         return a;
-
         });
-
       }));
   }
 }

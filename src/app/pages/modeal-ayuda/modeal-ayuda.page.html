@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+    <ion-button size="small" color="primary" (click)="dismiss()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ayudaForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Medicamentos</ion-label>
+        <ion-checkbox name="medico" formControlName="medicamentos" color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    
+    <ion-list>
+      <ion-item>
+        <ion-label>Ropas</ion-label>
+        <ion-checkbox name="ropas" formControlName="ropas" color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-list> 
+      <ion-item>
+        <ion-label>Viveres</ion-label>
+        <ion-checkbox name="comida" formControlName="viveres" color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Accidente</ion-label>
+        <ion-checkbox name="accidente" formControlName="accidente" color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Situacion de Riesgo</ion-label>
+        <ion-checkbox name="situacionRiesgo" formControlName="situacionRiesgo" color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Inundacion</ion-label>
+        <ion-checkbox name="inundacion" formControlName="inundacion" color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    
+    <ion-item>
+      <ion-label position="floating">Télefono</ion-label>
+      <ion-input formControlName="telefono" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Describe la situación</ion-label>
+      <ion-textarea maxlength="200" name="descripcion" formControlName="descripcion" ></ion-textarea>
+    </ion-item>
+    
+    <ion-button type="button" size="small" color="success" (click)="altaMarcador()" ><ion-icon name="checkmark-circle-outline"></ion-icon></ion-button>
+    <ion-button type="button" size="small" color="danger" (click)="salir()"> <ion-icon name="close-circle"></ion-icon></ion-button>
+  
+  </form>
+  
+</ion-content>

@@ -16,12 +16,15 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule, IonicModule.forRoot(), 
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
