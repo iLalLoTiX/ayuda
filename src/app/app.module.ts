@@ -18,6 +18,9 @@ import { environment } from '../environments/environment';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import { Facebook } from '@ionic-native/facebook/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -32,6 +35,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
+    Facebook,
     Geolocation,
     StatusBar,
     SplashScreen,

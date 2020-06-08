@@ -15,8 +15,13 @@ export class HomePage {
   }
 
   login(){
-    // this.loginServices.login();
-    this.home();
+    this.loginServices.login().then( (resp) => { 
+      console.log('uwu');
+      console.log(JSON.stringify(resp))
+      this.home();
+    }).catch( err => {
+      console.log('chingaste a tu madre');
+    });
   }
 
   home(){

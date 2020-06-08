@@ -14,12 +14,13 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { ModealAyudaPage } from '../modeal-ayuda/modeal-ayuda.page';
 
 @Component({
-  selector: 'app-mapa',
-  templateUrl: './mapa.page.html',
-  styleUrls: ['./mapa.page.scss'],
+  selector: 'app-mis-marcadores',
+  templateUrl: './mis-marcadores.page.html',
+  styleUrls: ['./mis-marcadores.page.scss'],
 })
-export class MapaPage implements OnInit {
+export class MisMarcadoresPage implements OnInit {
 
+  
   public mapa = Mapboxgl.Map;
   public marcadores;
   public nuevoMarcador;

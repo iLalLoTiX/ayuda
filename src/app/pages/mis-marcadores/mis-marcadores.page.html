@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis peticiones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+  <div id="map" style="height:100%;"></div>
+<ng-container *ngIf="nuevoMarcador != null">
+  <ion-button size="small" color="success" (click)="agregarMarcador()"><ion-icon name="checkmark-circle-outline"></ion-icon></ion-button>
+  <ion-button size="small" color="danger" (click)="cancelarOpeeacion()"> <ion-icon name="close-circle"></ion-icon></ion-button>
+</ng-container>
+  
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="end">
+      <ion-fab-button color="primary" (click)="agregarUbicacion()">
+        <ion-icon color="primary" name="pin"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="danger" (click)="logout()">
+        <ion-icon color="light" name="log-out"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

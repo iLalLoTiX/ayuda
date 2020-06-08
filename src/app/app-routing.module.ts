@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'modeal-ayuda',
     loadChildren: () => import('./pages/modeal-ayuda/modeal-ayuda.module').then( m => m.ModealAyudaPageModule)
   },
+  {
+    path: 'mis-marcadores',
+    loadChildren: () => import('./pages/mis-marcadores/mis-marcadores.module').then( m => m.MisMarcadoresPageModule)
+  },
 ];
 
 @NgModule({
